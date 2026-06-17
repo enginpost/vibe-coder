@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"/Users/stevem/Documents/_claude code projects/Project-Template/product-documentation\")",
+      "Bash(ls ~/.claude/ && echo \"---\" && ls \"/Users/stevem/Documents/_claude code projects/Project-Template/.claude/\" 2>/dev/null || echo \"no .claude dir in project\")",
+      "Bash(mkdir -p \"/Users/stevem/Documents/_claude code projects/Project-Template/.claude/skills/product-management\")",
+      "Bash(mv \"/Users/stevem/Documents/_claude code projects/Project-Template/product-documentation\" \"/Users/stevem/Documents/_claude code projects/Project-Template/.claude/skills/product-management/md-templates\")",
+      "Bash(mkdir -p \"/Users/stevem/Documents/_claude code projects/Project-Template/.claude/skills/product-discovery\")",
+      "Bash(mkdir -p \"/Users/stevem/Documents/_claude code projects/Project-Template/.claude/skills/feature-discovery\")",
+      "Bash(mkdir -p \"/Users/stevem/Documents/_claude code projects/Project-Template/.claude/skills/feature-decomposition\")",
+      "Bash(mkdir -p \"/Users/stevem/Documents/_claude code projects/Project-Template/.claude/skills/roadmap-management\")",
+      "Bash(mkdir -p \"/Users/stevem/Documents/_claude code projects/Project-Template/.claude/skills/epic-composition\")",
+      "Bash(mkdir -p \"/Users/stevem/Documents/_claude code projects/Project-Template/.claude/skills/solution-architecture-planning\")",
+      "Bash(rm \"/Users/stevem/Documents/_claude code projects/Project-Template/.claude/skills/product-management/SKILL.md\")",
+      "Bash(rmdir \"/Users/stevem/Documents/_claude code projects/Project-Template/.claude/skills/product-management\")",
+      "Bash(rm \"/Users/stevem/Documents/_claude code projects/Project-Template/.claude/skills/pm-templates/roadmap-plan.template.md\")",
+      "Bash(mkdir -p \"/Users/stevem/Documents/_claude code projects/Project-Template/.claude/skills/product-iteration\")",
+      "Bash(chmod +x \"/Users/stevem/Documents/_claude code projects/Project-Template/install.sh\")",
+      "Bash(bash install.sh)",
+      "Bash(sed -i '' 's|product-management/|product-documentation/|g' \\\\ *)",
+      "Bash(sed -i '' 's|.claude/skills/pm-templates/|.claude/skills/vc_pm-templates/|g' \\\\ *)"
+    ]
+  }
+}

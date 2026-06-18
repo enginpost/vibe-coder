@@ -11,15 +11,20 @@ story--<action-slug>.md
 ```
 
 - `<action-slug>` is derived from the `<perform some action>` portion of the story statement
+- Strip any leading filler phrases before deriving the slug: "I need to", "I want to", "I would like to", "I can", "I am able to", or similar
 - Use lowercase kebab-case
-- Example: "check my used tokens this month" → `story--check-my-used-tokens-this-month.md`
+- Preserve meaningful capitalisation for proper nouns or acronyms (e.g. AI, API) only if it aids readability; otherwise lowercase everything
+- Examples:
+  - "add an AI chat configuration to the app" → `story--add-an-AI-chat-configuration-to-the-app.md`
+  - "check my used tokens this month" → `story--check-my-used-tokens-this-month.md`
+  - "export a report as PDF" → `story--export-a-report-as-PDF.md`
 
 ### File Location
 
-Stories live in a subfolder named after their parent feature file, inside `product-management/features/`:
+Stories live in a subfolder named after their parent feature file, inside `product-documentation/features/`:
 
 ```
-product-management/
+product-documentation/
 └── features/
     ├── feature--<product-name>--<feature-name>.md
     └── feature--<product-name>--<feature-name>/
@@ -30,7 +35,7 @@ product-management/
 Example:
 
 ```
-product-management/
+product-documentation/
 └── features/
     ├── feature--expense-tracker--receipt-capture.md
     └── feature--expense-tracker--receipt-capture/
@@ -61,14 +66,14 @@ After a story is created, the parent feature's **Stories** section must be updat
 ## Story Title
 <action-slug in readable form — same as the <perform some action> portion of the statement>
 
-## Input Stories
+## Predecessor Stories
 *Stories whose outcome this story depends on as a precondition.*
 
 - [<Story Title>](<relative-path-to-story>.md) — <why this story's outcome is needed here>
 
 > If none: None identified.
 
-## Output Stories
+## Successor Stories
 *Stories that depend on this story's outcome.*
 
 - [<Story Title>](<relative-path-to-story>.md) — <why this story's outcome feeds that story>
@@ -112,10 +117,10 @@ When a user wants to create feature stories, your job is to:
 If not clear from context, ask:
 > "Which feature are we writing stories for?"
 
-- Locate `product-management/features/feature--<product-name>--<feature-name>.md`.
+- Locate `product-documentation/features/feature--<product-name>--<feature-name>.md`.
 - Read it fully: acceptance criteria, target users, pains/gains, and existing Stories section.
 - Create the story subfolder if it does not exist:
-  `product-management/features/feature--<product-name>--<feature-name>/`
+  `product-documentation/features/feature--<product-name>--<feature-name>/`
 
 #### Step 2 — Derive Candidate Stories
 
@@ -144,10 +149,10 @@ Present the candidate story statement derived from the acceptance criteria:
 - Confirm the role matches a persona from the product vision.
 - Ensure the statement describes a **need**, not a solution.
 - If the statement implies a solution (e.g., "I need a button to..."), flag it and reframe: *"Let's keep this focused on the need — what does the user need to accomplish, not how?"*
-- Derive the `<action-slug>` from the confirmed action phrase.
+- Derive the `<action-slug>` from the confirmed action phrase. Strip any leading filler ("I need to", "I want to", "I would like to", etc.) so the slug starts with the action verb (e.g. "add an AI chat configuration to the app" → `add-an-AI-chat-configuration-to-the-app`).
 - Once confirmed, create the story file stub at the correct path.
 
-#### Step 4 — Input Stories
+#### Step 4 — Predecessor Stories
 
 Ask:
 > "Does this story depend on the outcome of any other story as a precondition?"
@@ -155,20 +160,22 @@ Ask:
 If yes, present a list of sibling stories from this feature's folder and stories from sibling features:
 > "Here are the other stories I can see: [list]. Which of these feed into this one?"
 
-- For each identified input story, confirm: *"[Story title] — is that right?"*
-- Capture each as a linked entry with a one-line reason.
+- For each identified predecessor story, confirm: *"[Story title] — is that right?"*
+- Capture each as a linked entry with a one-line reason in the current story's **Predecessor Stories** section.
+- **Back-link required:** Open the predecessor story file and add the current story as a linked entry in its **Successor Stories** section, with a one-line reason explaining why it follows. If the predecessor's Successor Stories section currently reads `None identified.`, replace that line with the new entry.
 
 If none, record `> If none: None identified.`
 
-#### Step 5 — Output Stories
+#### Step 5 — Successor Stories
 
 Ask:
 > "Does any other story depend on the outcome of this story as a precondition?"
 
 Present the same sibling story list as above for reference.
 
-- For each identified output story, confirm one at a time.
-- Capture each as a linked entry with a one-line reason.
+- For each identified successor story, confirm one at a time.
+- Capture each as a linked entry with a one-line reason in the current story's **Successor Stories** section.
+- **Back-link required:** Open the successor story file and add the current story as a linked entry in its **Predecessor Stories** section, with a one-line reason explaining the dependency. If the successor's Predecessor Stories section currently reads `None identified.`, replace that line with the new entry.
 
 If none, record `> If none: None identified.`
 

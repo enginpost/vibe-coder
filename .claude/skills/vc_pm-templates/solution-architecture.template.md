@@ -16,7 +16,7 @@ solution-architecture--<product-name>.md
 
 ```
 project-root/
-└── product-management/
+└── product-documentation/
     ├── product-vision--<product-name>.md
     ├── solution-architecture--<product-name>.md
     └── ...
@@ -96,7 +96,7 @@ This document is the source of record for all technology standards. It is never 
 
 When a user says "let's define our solution architecture" or when no solution architecture document exists and story refinement is about to begin, your job is to:
 
-1. Check whether `product-management/solution-architecture--<product-name>.md` already exists.
+1. Check whether `product-documentation/solution-architecture--<product-name>.md` already exists.
 2. If it exists: load it, present a summary, and ask if the user wants to review or update any section.
 3. If it does not exist: conduct the creation interview below.
 

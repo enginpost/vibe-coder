@@ -18,7 +18,7 @@ epic--<product-name>--<epic-name>.md
 
 ```
 project-root/
-└── product-management/
+└── product-documentation/
     ├── product-vision--<product-name>.md
     ├── features/
     │   ├── feature--<product-name>--<feature-name>.md
@@ -101,8 +101,8 @@ When a user wants to create an epic, your job is to:
 If not clear from context, ask:
 > "Which product is this epic for?"
 
-- Load `product-management/product-vision--<product-name>.md`.
-- Load all feature files from `product-management/features/` and their story files.
+- Load `product-documentation/product-vision--<product-name>.md`.
+- Load all feature files from `product-documentation/features/` and their story files.
 - Note the rank order of features as listed in the product vision Scope section.
 - Note the rank order of stories within each feature's Stories section.
 
@@ -113,7 +113,7 @@ If not clear from context, ask:
 Ask:
 > "What would you like to call this epic or release? For example: MVP, v1, Beta Launch."
 
-- Confirm the name, derive the file slug, and create the epic file stub at `product-management/epics/epic--<product-name>--<epic-name>.md`.
+- Confirm the name, derive the file slug, and create the epic file stub at `product-documentation/epics/epic--<product-name>--<epic-name>.md`.
 
 ---
 

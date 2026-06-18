@@ -16,7 +16,7 @@ epic-plan--<product-name>--<epic-name>.md
 
 ```
 project-root/
-└── product-management/
+└── product-documentation/
     └── epics/
         ├── epic--<product-name>--<epic-name>.md        ← definition (unchanged)
         └── epic-plan--<product-name>--<epic-name>.md   ← execution plan (this file)

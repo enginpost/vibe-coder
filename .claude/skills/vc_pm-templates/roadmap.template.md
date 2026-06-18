@@ -16,7 +16,7 @@ roadmap--<product-name>.md
 
 ```
 project-root/
-└── product-management/
+└── product-documentation/
     ├── product-vision--<product-name>.md
     ├── roadmap--<product-name>.md
     ├── features/
@@ -99,7 +99,7 @@ If not clear from context, ask:
 > "Which product's roadmap are we working on?"
 
 - Load the product vision and all epic files for that product.
-- Check whether `product-management/roadmap--<product-name>.md` already exists.
+- Check whether `product-documentation/roadmap--<product-name>.md` already exists.
   - If yes: load it and go to **Resuming an Existing Roadmap** below.
   - If no: proceed to Step 2.
 
@@ -110,7 +110,7 @@ If not clear from context, ask:
 Inform the user:
 > "I'll create the roadmap file now. It will start empty and we'll add Business Value Propositions one at a time."
 
-- Create `product-management/roadmap--<product-name>.md` with the document structure stubbed out.
+- Create `product-documentation/roadmap--<product-name>.md` with the document structure stubbed out.
 - Add a reference link to this roadmap in the product vision's **Timeline & Roadmap** section if not already present.
 
 ---

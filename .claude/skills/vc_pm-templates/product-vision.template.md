@@ -15,11 +15,11 @@ product-vision--<product-name>.md
 
 ### File Location
 
-Completed product vision documents are created in a subfolder named `product-management/` within the project root. Templates are stored in `.claude/skills/product-management/md-templates/`.
+Completed product vision documents are created in a subfolder named `product-documentation/` within the project root. Templates are stored in `.claude/skills/vc_pm-templates/`.
 
 ```
 project-root/
-└── product-management/
+└── product-documentation/
     └── product-vision--<product-name>.md
 ```
 
@@ -85,10 +85,8 @@ A completed product vision document follows this structure:
 ## Stakeholders
 - <Name or role> — <relationship to product>
 
-## Timeline & Roadmap
-> See: [Roadmap](../product-management/roadmap--<product-name>.md)
-
-*Horizon:* <Near-term / Mid-term / Long-term — or quarter label>
+## Roadmap
+> See: [Roadmap](../product-documentation/roadmap--<product-name>.md)
 ```
 
 ---
@@ -102,7 +100,7 @@ A completed product vision document follows this structure:
 When a user wants to create a product vision, your job is to:
 
 1. Interview them **one question at a time**, waiting for each response before continuing.
-2. **Immediately create** the output file `product-management/product-vision--<product-name>.md` after learning the product name, and **continuously update it** as answers come in.
+2. **Immediately create** the output file `product-documentation/product-vision--<product-name>.md` after learning the product name, and **continuously update it** as answers come in.
 3. When answers are vague, **ask one follow-up** for clarification. If they decline or remain vague, insert a `> [needs clarification]` marker in the relevant section and move on.
 4. At the start of any session where a draft already exists, **scan for `[needs clarification]` markers** and offer to work through them before continuing.
 
@@ -120,7 +118,7 @@ Ask:
 > "What is the name of this product?"
 
 - Use the answer to name the output file immediately: `product-vision--<product-name>.md`
-- Create the file in `product-management/` with the full document structure stubbed out.
+- Create the file in `product-documentation/` with the full document structure stubbed out.
 
 ---
 
@@ -214,15 +212,12 @@ Ask:
 
 ---
 
-#### Step 9 — Timeline & Horizon
+#### Step 9 — Roadmap Placeholder
 
-Ask:
-> "What's your time horizon for this product? Near-term (weeks to months), mid-term (a quarter or two), or longer? Any key dates or phases worth noting now?"
+Do not ask the user any questions for this step.
 
-- Record the horizon label and any phase or milestone notes.
-- Add a placeholder link to the roadmap document:
-  `See: roadmap--<product-name>.md`
-- Note: *"We'll flesh out the roadmap in a separate document."*
+- Write the **Roadmap** section with only the placeholder link: `See: [Roadmap](../product-documentation/roadmap--<product-name>.md)`
+- Leave no other content under this section — it will be populated when running the roadmap-management skill.
 
 ---
 

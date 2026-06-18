@@ -15,11 +15,11 @@ feature--<product-name>--<feature-name>.md
 
 ### File Location
 
-Completed feature documents are created in `product-management/features/`, with a same-named subfolder for that feature's stories:
+Completed feature documents are created in `product-documentation/features/`, with a same-named subfolder for that feature's stories:
 
 ```
 project-root/
-└── product-management/
+└── product-documentation/
     ├── product-vision--<product-name>.md
     └── features/
         ├── feature--<product-name>--<feature-name>.md
@@ -41,7 +41,7 @@ After a feature document is created, the parent product vision's **Scope** secti
 ```markdown
 # Feature: <Feature Name>
 
-**Product:** [<Product Name>](../product-management/product-vision--<product-name>.md)
+**Product:** [<Product Name>](../product-documentation/product-vision--<product-name>.md)
 
 ## Description
 <What this feature does and why it exists.>
@@ -77,7 +77,7 @@ After a feature document is created, the parent product vision's **Scope** secti
 ## Stories
 *Populated after feature-stories are defined. Ordered by delivery priority.*
 
-> No stories defined yet. See: [feature-stories.template.md](.claude/skills/product-management/md-templates/feature-stories.template.md)
+> No stories defined yet. See: [feature-stories.template.md](.claude/skills/product-documentation/md-templates/feature-stories.template.md)
 ```
 
 ---
@@ -90,10 +90,10 @@ After a feature document is created, the parent product vision's **Scope** secti
 
 When a user wants to create or update a feature, your job is to:
 
-1. **Read the product vision** first — load `product-management/product-vision--<product-name>.md` to understand existing personas, pains/gains, and the current scope list.
+1. **Read the product vision** first — load `product-documentation/product-vision--<product-name>.md` to understand existing personas, pains/gains, and the current scope list.
 2. **Identify whether this is a new feature or an update** to an existing one — present the contrast to the user and confirm before proceeding.
 3. **Interview one question at a time**, waiting for each response.
-4. **Immediately create** the output file `product-management/feature--<product-name>--<feature-name>.md` once the feature name is confirmed, and **continuously update it** as answers come in.
+4. **Immediately create** the output file `product-documentation/feature--<product-name>--<feature-name>.md` once the feature name is confirmed, and **continuously update it** as answers come in.
 5. After saving the feature, **update the product vision Scope section** with a linked entry and ask the user to confirm the ordering.
 6. When answers are vague, ask one follow-up. If still vague, insert `> [needs clarification]` and move on.
 
@@ -108,7 +108,7 @@ When a user wants to create or update a feature, your job is to:
 If not already known from context, ask:
 > "Which product is this feature for?"
 
-- Locate the corresponding `product-vision--<product-name>.md` in `product-management/`.
+- Locate the corresponding `product-vision--<product-name>.md` in `product-documentation/`.
 - Read it fully before continuing — you will use it throughout this interview.
 
 ---
@@ -137,7 +137,7 @@ Then:
 > "Describe what this feature does and why it exists — a few sentences is fine."
 
 - Confirm the name is meaningfully distinct from existing features.
-- Create the file `product-management/features/feature--<product-name>--<feature-name>.md` with the full structure stubbed out.
+- Create the file `product-documentation/features/feature--<product-name>--<feature-name>.md` with the full structure stubbed out.
 
 ---
 
@@ -196,7 +196,7 @@ For each subsection, if the answer is vague, follow up once. If still vague, add
 
 After the feature document is saved:
 
-1. Open `product-management/product-vision--<product-name>.md`.
+1. Open `product-documentation/product-vision--<product-name>.md`.
 2. Add the new feature to the **Scope** section as a linked entry:
    `[<Feature Name>](feature--<product-name>--<feature-name>.md)`
 3. Present the full updated Scope list to the user:
